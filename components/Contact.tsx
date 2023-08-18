@@ -21,12 +21,13 @@ const Contact = () => {
     });
   };
 
-  const [inputs, setInputs] = useState({
+  const initialState = {
     firstName: "",
     lastName: "",
     email: "",
     message: "",
-  });
+  };
+  const [inputs, setInputs] = useState(initialState);
 
   return (
     <div id="contact" className="w-full lg:h-screen">
@@ -82,7 +83,11 @@ const Contact = () => {
                 ></textarea>
               </div>
               <button
-                onClick={() => startTransition(() => sendEmail(inputs))}
+                onClick={() =>
+                  startTransition(() => {
+                    sendEmail(inputs), setInputs(initialState);
+                  })
+                }
                 disabled={isPending}
                 type="submit"
                 className="w-full p-4 text-gray-700 mt-4"
