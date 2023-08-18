@@ -18,10 +18,10 @@ const About = () => {
             evolves, and I&apos;m fueled by my passion for staying at the
             forefront. What excites me most is the recognition that for every
             challenge, there&apos;s a multitude of solutions. Currently,
-            I&apos;m working with Angular, Ionic, Node.js, React, Next.js, and
-            Python Django Rest Framework, SQL and noSQL databases. Yet, I truly
+            I&apos;m working with Angular, Ionic, Node.js, React, Next.js,
+            Python Django Rest Framework, SQL and noSQL databases. I truly
             believe that true expertise in development isn't tied to a single
-            language, but rather in the ability to select the perfect tool for
+            language, but rather to the ability to select the perfect tool for
             each unique task.
           </p>
           <p className="py-2 text-gray-600 m-auto max-w-[70%]">
@@ -31,9 +31,9 @@ const About = () => {
             captivated. What drives me is the desire to bridge the gap between
             my background in chemical, oil and gas, and the dynamic realm of
             software engineering. Beyond coding, I find joy in exploring
-            emerging technologies during my leisure hours. And when I'm not
-            immersed in the world of development, you might catch me indulging
-            in a few rounds of video games.
+            emerging technologies during my leisure hours. When I'm not immersed
+            in the world of development, you might catch me indulging in a few
+            rounds of video games.
           </p>
           <Link href="/#projects">
             <p className="py-2 text-gray-600 underline cursor-pointer">
