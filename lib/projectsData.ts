@@ -36,7 +36,7 @@ export const projectsData = [
     overview:
       "For my Next.js learning journey, I embarked on the task of replicating the popular restaurant reservation platform, OpenTable.ca. Inspired by its sophisticated booking system and table availability logic, I aimed to enhance my understanding of Next.js while creating a functional restaurant reservation platform of my own.",
     repoLink: "https://github.com/moneeroz/open-table-clone-NextJs",
-    demoSiteLink: "https://open-table-clone-5s8kbumxq-moneeroz.vercel.app/",
+    demoSiteLink: "https://open-table-clone-eight.vercel.app/",
     technologies: [
       "React",
       "Next JS",
