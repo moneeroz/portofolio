@@ -49,6 +49,7 @@ const Contact = () => {
                     name="firstName"
                     value={inputs.firstName}
                     onChange={handleChangeInput}
+                    required
                   />
                 </div>
                 <div className="flex flex-col">
@@ -59,6 +60,7 @@ const Contact = () => {
                     name="lastName"
                     value={inputs.lastName}
                     onChange={handleChangeInput}
+                    required
                   />
                 </div>
               </div>
@@ -70,6 +72,7 @@ const Contact = () => {
                   name="email"
                   value={inputs.email}
                   onChange={handleChangeInput}
+                  required
                 />
               </div>
               <div className="flex flex-col py-2">
@@ -80,12 +83,23 @@ const Contact = () => {
                   name="message"
                   value={inputs.message}
                   onChange={handleChangeMessage}
+                  required
                 ></textarea>
               </div>
               <button
                 onClick={() =>
                   startTransition(() => {
-                    sendEmail(inputs), setInputs(initialState);
+                    if (
+                      !inputs.firstName ||
+                      !inputs.lastName ||
+                      !inputs.email ||
+                      !inputs.message
+                    ) {
+                      return;
+                    }
+
+                    sendEmail(inputs);
+                    setInputs(initialState);
                   })
                 }
                 disabled={isPending}
