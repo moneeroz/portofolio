@@ -1,6 +1,5 @@
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { AiOutlineFilePdf, AiOutlineMail } from "react-icons/ai";
 import Link from "next/link";
 
 const SideMenuIcons = () => (
@@ -25,8 +24,12 @@ const SideMenuIcons = () => (
       </Link>
     </div>
     <div className="p-3 rounded-full shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-300">
-      <Link href="/#contact">
-        <BsFillPersonLinesFill />
+      <Link
+        href="/assets/resume/moneerResume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <AiOutlineFilePdf />
       </Link>
     </div>
   </div>

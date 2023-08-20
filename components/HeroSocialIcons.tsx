@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { AiOutlineFilePdf, AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const HeroSocialIcons = () => {
@@ -30,8 +29,12 @@ const HeroSocialIcons = () => {
         </Link>
       </div>
       <div className="p-5 rounded-full shadow-lg shadow-gray-400 cursor-pointer hover:scale-125 ease-in duration-300">
-        <Link href="/#contact">
-          <BsFillPersonLinesFill />
+        <Link
+          href="/assets/resume/moneerResume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <AiOutlineFilePdf />
         </Link>
       </div>
     </div>
