@@ -1,7 +1,54 @@
 import KitchenKeeperImg from "@/public/assets/projects/kitchenkeeper.jpg";
 import opentableImg from "@/public/assets/projects/opentable.png";
+import rnImg from "@/public/assets/projects/rn.png";
+import nitroImg from "@/public/assets/projects/nitro.png";
 
 export const projectsData = [
+  {
+    slug: "rn-recipes",
+    title: "React Native Recipes",
+    backgroundImg: rnImg,
+    projectUrl: "/projects/rn-recipes",
+    tech: "React Native & Nitro",
+    stack: "React Native & Expo / Node & Nitro / Postgres",
+    overview:
+      "React Native Recipes is mobile recipe app that allows users to explore a vast collection of recipes, create personalised shopping lists and more.",
+    repoLink: "https://github.com/moneeroz/rn-recipes",
+    demoSiteLink:
+      "https://res.cloudinary.com/dsity4tvx/video/upload/v1704783695/rn-recipes-demo/ukk9fdkuywbymnkivxsq.mov",
+    technologies: [
+      "React Native",
+      "Expo",
+      "Redux Tool Kit",
+      "Node JS",
+      "Nitro",
+      "Prisma",
+      "Postgres",
+      "JWT",
+      "Cloudinary SDK",
+    ],
+  },
+  {
+    slug: "nitro-server",
+    title: "React Native Recipes Server",
+    backgroundImg: nitroImg,
+    projectUrl: "/projects/nitro-server",
+    tech: "TypeScript & Nitro",
+    stack: "TypeScript / Node & Nitro / Postgres",
+    overview:
+      "React Native Recipes is mobile recipe app that allows users to explore a vast collection of recipes, create personalised shopping lists and more.",
+    repoLink: "https://github.com/moneeroz/rn-recipes-nitro-server",
+    demoSiteLink: "",
+    technologies: [
+      "TypeScript",
+      "Nitro",
+      "Node JS",
+      "Prisma",
+      "Postgres",
+      "JWT",
+      "Cloudinary SDK",
+    ],
+  },
   {
     slug: "kitchen-keeper",
     title: "Kitchen Keeper",
