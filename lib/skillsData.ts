@@ -16,6 +16,8 @@ import materialuiImg from "@/public/assets/skills/materialui.png";
 import postgresImg from "@/public/assets/skills/postgres.png";
 import mongoImg from "@/public/assets/skills/mongo.png";
 import prismaImg from "@/public/assets/skills/prisma.png";
+import rnImg from "@/public/assets/skills/rn-logo.webp";
+import expoImg from "@/public/assets/skills/expo.png";
 
 export const skillsData = [
   { name: "HTML", img: htmlImg },
@@ -24,8 +26,10 @@ export const skillsData = [
   { name: "TypeScript", img: typescriptImg },
   { name: "Angular", img: angularImg },
   { name: "Ionic", img: ionicImg },
-  { name: "React", img: reactImg },
   { name: "Next", img: nextImg },
+  { name: "React", img: reactImg },
+  { name: "React Native", img: rnImg },
+  { name: "Expo", img: expoImg },
   { name: "Node", img: nodeImg },
   { name: "Python", img: pythonImg },
   { name: "DRF", img: djangorestImg },
