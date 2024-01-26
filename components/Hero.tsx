@@ -1,10 +1,11 @@
 import React from "react";
 import HeroSocialIcons from "./HeroSocialIcons";
+import Link from "next/link";
 
 const Hero = () => {
   return (
     <div
-      id="home"
+      id="about"
       className="max-w-[1240px] w-full h-full mx-auto p2 flex justify-center items-center"
     >
       <div>
@@ -27,6 +28,12 @@ const Hero = () => {
         </p>
 
         <HeroSocialIcons />
+
+        <Link href="/#projects">
+          <p className="my-4 text-gray-600 underline cursor-pointer">
+            Check out some of my latest projects.
+          </p>
+        </Link>
       </div>
     </div>
   );

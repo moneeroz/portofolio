@@ -1,6 +1,6 @@
 import React from "react";
 import Project from "./Project";
-import { projectsData } from "@/lib/projectsData";
+import { previousProjects, mainProject } from "@/lib/projectsData";
 
 const Projects = () => {
   return (
@@ -10,9 +10,25 @@ const Projects = () => {
           Projects
         </p>
         <h2 className="py-4">What I&apos;ve Built</h2>
+        <h3 className="py-4 my-4 text-3xl">Main Project:</h3>
         <div className="grid md:grid-cols-2 gap-8">
-          {projectsData &&
-            projectsData.map((project) => (
+          {mainProject &&
+            mainProject.map((project) => (
+              <Project
+                key={project.slug}
+                title={project.title}
+                backgroundImg={project.backgroundImg}
+                projectUrl={project.projectUrl}
+                tech={project.tech}
+                isMainProject={true}
+                description={project.description}
+              />
+            ))}
+        </div>
+        <h3 className="py-4 my-8 text-3xl">Previous Projects:</h3>
+        <div className="grid md:grid-cols-2 gap-8">
+          {previousProjects &&
+            previousProjects.map((project) => (
               <Project
                 key={project.slug}
                 title={project.title}

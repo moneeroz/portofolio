@@ -1,19 +1,26 @@
 import KitchenKeeperImg from "@/public/assets/projects/kitchenkeeper.jpg";
 import opentableImg from "@/public/assets/projects/opentable.png";
-import rnImg from "@/public/assets/projects/rn.png";
+import rrImg from "@/public/assets/projects/reciperift.png";
 import nitroImg from "@/public/assets/projects/nitro.png";
+import homeImg from "@/public/assets/projects/reciperift/home.png";
+import authImg from "@/public/assets/projects/reciperift/auth.png";
+import basketImg from "@/public/assets/projects/reciperift/basket.png";
+import bottomsheetImg from "@/public/assets/projects/reciperift/bottomsheet.png";
+import detailsImg from "@/public/assets/projects/reciperift/details.png";
+import favouritesImg from "@/public/assets/projects/reciperift/favourites.png";
+import grocerylistImg from "@/public/assets/projects/reciperift/grocerylist.png";
 
-export const projectsData = [
+export const mainProject = [
   {
-    slug: "rn-recipes",
-    title: "React Native Recipes",
-    backgroundImg: rnImg,
-    projectUrl: "/projects/rn-recipes",
+    slug: "recipe-rift",
+    title: "RecipeRift",
+    backgroundImg: rrImg,
+    projectUrl: "/projects/recipe-rift",
     tech: "React Native & Nitro",
     stack: "React Native & Expo / Node & Nitro / Postgres",
     overview:
-      "React Native Recipes is mobile recipe app that allows users to explore a vast collection of recipes, create personalised shopping lists and more.",
-    repoLink: "https://github.com/moneeroz/rn-recipes",
+      "RecipeRift is mobile recipe app that allows users to explore a vast collection of recipes, create personalised shopping lists and more.",
+    repoLink: "https://github.com/moneeroz/RecipeRift",
     demoSiteLink:
       "https://res.cloudinary.com/dsity4tvx/video/upload/v1704783695/rn-recipes-demo/ukk9fdkuywbymnkivxsq.mov",
     technologies: [
@@ -27,17 +34,28 @@ export const projectsData = [
       "JWT",
       "Cloudinary SDK",
     ],
+    images: [
+      { title: "Home Page", img: homeImg },
+      { title: "Recipe Details", img: detailsImg },
+      { title: "User favourites", img: favouritesImg },
+      { title: "Basket", img: basketImg },
+      { title: "Grocery List", img: grocerylistImg },
+      { title: "Bottom Sheet", img: bottomsheetImg },
+      { title: "Authentication", img: authImg },
+    ],
+    description:
+      "RecipeRift is a user friendly react native recipe app. It allows users to easily browse recipes, favourite them and add them to their basket. Users can generate grocery lists from their basket and check off items as they shop.",
   },
   {
     slug: "nitro-server",
-    title: "React Native Recipes Server",
+    title: "RecipeRift Server",
     backgroundImg: nitroImg,
     projectUrl: "/projects/nitro-server",
     tech: "TypeScript & Nitro",
     stack: "TypeScript / Node & Nitro / Postgres",
     overview:
-      "React Native Recipes is mobile recipe app that allows users to explore a vast collection of recipes, create personalised shopping lists and more.",
-    repoLink: "https://github.com/moneeroz/rn-recipes-nitro-server",
+      "RecipeRift Nitro server is a fast and lightweight Typescript server with a REST API and POSTGRES database.",
+    repoLink: "https://github.com/moneeroz/RecipeRift-nitro-server",
     demoSiteLink: "",
     technologies: [
       "TypeScript",
@@ -48,7 +66,12 @@ export const projectsData = [
       "JWT",
       "Cloudinary SDK",
     ],
+    description:
+      "RecipeRift server is a fast and lightweight Typescript sever using Nitro unjs. It has a REST API and POSTGRES database with JWT authentication. It is used to serve data to the RecipeRift mobile app.",
   },
+];
+
+export const previousProjects = [
   {
     slug: "kitchen-keeper",
     title: "Kitchen Keeper",

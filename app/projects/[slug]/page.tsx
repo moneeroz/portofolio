@@ -1,16 +1,34 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
-import { projectsData } from "@/lib/projectsData";
+import { mainProject, previousProjects } from "@/lib/projectsData";
 
 interface Props {
   params: { slug: string };
 }
 
+interface Project {
+  slug: string;
+  title: string;
+  backgroundImg: StaticImageData;
+  projectUrl: string;
+  tech: string;
+  stack: string;
+  overview: string;
+  repoLink: string;
+  demoSiteLink: string;
+  technologies: string[];
+  description?: string;
+  images?: Array<{ title: string; img: string }>;
+}
+
 const Project = ({ params }: Props) => {
   const slug = params.slug;
-  const project = projectsData.find((project) => project.slug === slug);
+  const projectsData = [...mainProject, ...previousProjects];
+  const project: Project | undefined = projectsData.find(
+    (project) => project.slug === slug,
+  );
 
   return (
     <div className="w-full">
@@ -45,8 +63,29 @@ const Project = ({ params }: Props) => {
               >
                 <button className="px-8 py-2 mt-4">Demo</button>
               </Link>
+              {project.images?.length && (
+                <div className="grid md:grid-cols-2 gap-4 mt-4 mx-10 md:mx-0">
+                  {project.images.map((image, index) => (
+                    <div>
+                      <h2
+                        className="text-center text-2xl py-4 my-2"
+                        key={index}
+                      >
+                        {image.title}
+                      </h2>
+                      <Image
+                        key={index}
+                        src={image.img}
+                        alt={image.title}
+                        className="border rounded-xl shadow-md hover:shadow-xl hover:border-transparent transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-            <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4">
+
+            <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4 h-fit">
               <div className="p-2">
                 <p className="text-center font-bold pb-2">Technologies</p>
                 <div className="grid grid-cols-3 md:grid-cols-1">
@@ -61,6 +100,7 @@ const Project = ({ params }: Props) => {
                 </div>
               </div>
             </div>
+
             <Link href="/#projects">
               <p className="underline cursor-pointer">Back</p>
             </Link>
