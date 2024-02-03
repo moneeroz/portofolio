@@ -3,6 +3,7 @@ import opentableImg from "@/public/assets/projects/opentable.png";
 import rrImg from "@/public/assets/projects/reciperift.png";
 import nitroImg from "@/public/assets/projects/nitro.png";
 import homeImg from "@/public/assets/projects/reciperift/home.png";
+import animationsImg from "@/public/assets/projects/reciperift/animations.gif";
 import authImg from "@/public/assets/projects/reciperift/auth.png";
 import basketImg from "@/public/assets/projects/reciperift/basket.png";
 import bottomsheetImg from "@/public/assets/projects/reciperift/bottomsheet.png";
@@ -16,7 +17,7 @@ export const mainProject = [
     title: "RecipeRift",
     backgroundImg: rrImg,
     projectUrl: "/projects/recipe-rift",
-    tech: "React Native & Nitro",
+    tech: "React Native & Expo & Nitro",
     stack: "React Native & Expo / Node & Nitro / Postgres",
     overview:
       "RecipeRift is mobile recipe app that allows users to explore a vast collection of recipes, create personalised shopping lists and more.",
@@ -36,6 +37,7 @@ export const mainProject = [
     ],
     images: [
       { title: "Home Page", img: homeImg },
+      { title: "Animations", img: animationsImg },
       { title: "Recipe Details", img: detailsImg },
       { title: "User favourites", img: favouritesImg },
       { title: "Basket", img: basketImg },
