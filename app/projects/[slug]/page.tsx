@@ -20,7 +20,7 @@ interface Project {
   demoSiteLink: string;
   technologies: string[];
   description?: string;
-  images?: Array<{ title: string; img: string }>;
+  images?: Array<{ title: string; img: StaticImageData }>;
 }
 
 const Project = ({ params }: Props) => {
@@ -66,15 +66,13 @@ const Project = ({ params }: Props) => {
               {project.images?.length && (
                 <div className="grid md:grid-cols-2 gap-4 mt-4 mx-10 md:mx-0">
                   {project.images.map((image, index) => (
-                    <div>
-                      <h2
-                        className="text-center text-2xl py-4 my-2"
-                        key={index}
-                      >
+                    <div key={index}>
+                      <h2 className="text-center text-2xl py-4 my-2">
                         {image.title}
                       </h2>
                       <Image
-                        key={index}
+                        width={500}
+                        height={500}
                         src={image.img}
                         alt={image.title}
                         className="border rounded-xl shadow-md hover:shadow-xl hover:border-transparent transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"

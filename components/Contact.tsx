@@ -104,7 +104,7 @@ const Contact = () => {
                 }
                 disabled={isPending}
                 type="submit"
-                className="w-full p-4 text-gray-700 mt-4"
+                className="w-full p-4 text-white mt-4"
               >
                 {isPending ? "Sending message..." : "Send Message"}
               </button>

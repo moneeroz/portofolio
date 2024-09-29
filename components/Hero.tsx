@@ -22,9 +22,7 @@ const Hero = () => {
           of Software Development, the intricate problems it presents, and the
           chance to engage in creative solutions. I am deeply committed to
           constantly bettering myself, which is evident in how I immerse myself
-          in various subjects during my free time. This eagerness for personal
-          growth is reflected in my expanding expertise and my steady
-          advancement in producing top-notch work.
+          in various subjects during my free time.
         </p>
 
         <HeroSocialIcons />

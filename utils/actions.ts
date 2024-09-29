@@ -1,6 +1,7 @@
 "use server";
 
-import { emailHtml } from "@/components/email";
+import { emailHtml, ContactEmail } from "@/components/email";
+import { render } from "@react-email/render";
 import nodemailer from "nodemailer";
 
 interface Props {
@@ -31,10 +32,15 @@ export const sendEmail = async ({
       from: process.env.SENDER_EMAIL,
       to: process.env.SENDER_EMAIL,
       subject: "Portfoilo contact message",
-      html: emailHtml({ firstName, lastName, email, message }),
+      html: await emailHtml({ firstName, lastName, email, message }),
     };
 
-    await transporter.sendMail(options);
+    transporter.sendMail({
+      subject: options.subject,
+      html: options.html,
+      from: options.from,
+      to: options.to,
+    });
   } catch (error: any) {
     throw new Error(error.message);
   }

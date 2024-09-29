@@ -10,7 +10,7 @@ const Projects = () => {
           Projects
         </p>
         <h2 className="py-4">What I&apos;ve Built</h2>
-        <h3 className="py-4 my-4 text-3xl">Main Project:</h3>
+        <h3 className="py-4 my-4 text-3xl">Most Recent:</h3>
         <div className="grid md:grid-cols-2 gap-8">
           {mainProject &&
             mainProject.map((project) => (

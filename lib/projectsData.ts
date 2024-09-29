@@ -10,8 +10,73 @@ import bottomsheetImg from "@/public/assets/projects/reciperift/bottomsheet.png"
 import detailsImg from "@/public/assets/projects/reciperift/details.png";
 import favouritesImg from "@/public/assets/projects/reciperift/favourites.png";
 import grocerylistImg from "@/public/assets/projects/reciperift/grocerylist.png";
+import homeDental from "@/public/assets/projects/peace-dental/home.png";
+import loginDental from "@/public/assets/projects/peace-dental/login.png";
+import overviewDental from "@/public/assets/projects/peace-dental/overview.png";
+import appointmentsDental from "@/public/assets/projects/peace-dental/appointments.png";
+import invoicesDental from "@/public/assets/projects/peace-dental/invoices.png";
+import patientsDental from "@/public/assets/projects/peace-dental/patients.png";
+import revenueDental from "@/public/assets/projects/peace-dental/revenue.png";
+import mobileDental from "@/public/assets/projects/peace-dental/mobile.png";
+import backendDental from "@/public/assets/projects/peace-dental/backend.png";
 
 export const mainProject = [
+  {
+    slug: "peace-dental",
+    title: "Peace Dental",
+    backgroundImg: homeDental,
+    projectUrl: "/projects/peace-dental",
+    tech: "Angular",
+    stack: "Angular / Node / Postgres",
+    overview:
+      "Peace Dental is a comprehensive web application designed for dental clinics to efficiently manage patients, appointments, invoices, and revenue. The application features simple ui and intuitive navigation, making it easy for both doctors and dental staff to access and manage their data. The project is built using Angular and TypeScript, and utilizes PostgreSQL for database management. Additionally, the application incorporates role-based access control, JWT authentication, and guarded routes to ensure secure access to sensitive areas. Overall, Peace Dental aims to provide a user-friendly and efficient solution for managing dental practices.",
+    repoLink: "https://github.com/moneeroz/Peace-dental",
+    demoSiteLink: "https://peace-ten.vercel.app/home",
+    technologies: [
+      "Angular",
+      "TypeScript",
+      "angular-calender",
+      "ng-print",
+      "ngx-flatpickr",
+    ],
+    images: [
+      { title: "Home Page", img: homeDental },
+      { title: "Login Page", img: loginDental },
+      { title: "Overview Page", img: overviewDental },
+      { title: "Appointments Page", img: appointmentsDental },
+      { title: "Invoices Page", img: invoicesDental },
+      { title: "Patients Page", img: patientsDental },
+      { title: "Revenue", img: revenueDental },
+      { title: "Mobile View", img: mobileDental },
+    ],
+    description:
+      "Peace Dental is a comprehensive web application designed for dental clinics to efficiently manage patients, appointments, invoices, and revenue. The application features simple ui and intuitive navigation, making it easy for both doctors and dental staff to access and manage their data. Additionally, the application incorporates role-based access control, JWT authentication, and guarded routes to ensure secure access to sensitive areas.",
+  },
+  {
+    slug: "peace-dental-server",
+    title: "Peace Dental Server",
+    backgroundImg: backendDental,
+    projectUrl: "/projects/peace-dental-server",
+    tech: "NodeJs & TypeScript",
+    stack: "NodeJs / Express / TypeScript / Postgres",
+    overview:
+      "The Peace Dental backend is a Node.js and Express server designed to power the Peace Dental web application. This robust server handles user authentication, data management, and API interactions with a PostgreSQL database using Drizzle ORM. Built with TypeScript, the backend follows the MVC architecture and incorporates JWT for secure authentication and authorization.",
+    repoLink: "https://github.com/moneeroz/peace-dental-backend",
+    demoSiteLink: "",
+    technologies: [
+      "Node JS",
+      "Express JS",
+      "TypeScript",
+      "Drizzle",
+      "Postgres",
+      "JWT",
+    ],
+    description:
+      "Peace Dental server is Typescript MVC REST API that uses JWT authentication, AUTH middleware and Drizzle to manage the Postgres database.",
+  },
+];
+
+export const previousProjects = [
   {
     slug: "recipe-rift",
     title: "RecipeRift",
@@ -71,9 +136,6 @@ export const mainProject = [
     description:
       "RecipeRift server is a fast and lightweight Typescript sever using Nitro unjs. It has a REST API and POSTGRES database with JWT authentication. It is used to serve data to the RecipeRift mobile app.",
   },
-];
-
-export const previousProjects = [
   {
     slug: "kitchen-keeper",
     title: "Kitchen Keeper",
